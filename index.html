@@ -1,0 +1,192 @@
+<!doctype HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Maycon"/>
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1"/>
+		<title>uGoodz</title>
+		<link rel="stylesheet" type="text/css" href="Estilo.css">
+		<link rel="shortcut icon" href="uGoodz Logo.png" type="image/x-icon">
+		<script language="JavaScript">
+
+			function abreMenu() 
+			{
+			  document.getElementById("menu-lateral").style.width = "30%";
+			  document.getElementById("menu-lateral").style.border = "3px outset #ffffff";
+			  document.getElementById("faixa").style.visibility = "hidden";
+              document.getElementById("conteudo").style.opacity = "0.3";
+              document.getElementById("fundo_site").style.opacity = "0.3";
+              document.getElementById("menu-lateral").style.zIndex = "1";
+              document.getElementById("botao").style.zIndex = "1";
+			}
+			
+			function fechaMenu()
+			{
+			  document.getElementById("menu-lateral").style.width = "0%";
+			  document.getElementById("menu-lateral").style.border = "";
+			  document.getElementById("faixa").style.visibility = "visible";
+              document.getElementById("conteudo").style.opacity = "1";
+              document.getElementById("fundo_site").style.opacity = "1";
+			}
+		</script>
+	</head>
+	
+	<body>
+        <header>
+            <span id="inicio">inicio</span>
+            <img id="fundo_site" src="Fundo Site.png">
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html"><h5 id="home">HOME</h5></a></li>
+					<li><a href="portfolio.html"><h5>Portfolio</h5></a></li>
+                    <li><a href="produtos.html"><h5>Produtos</h5></a></li>
+					<li><a href="contato.html"><h5>Contato</h5></a></li>
+				</ul>
+			</nav>
+            <aside id="menu-lateral">
+                <ul>
+                    <li><a onclick="fechaMenu()" id="home" href="index.html">HOME</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="portfolio.html">Portfolio</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="produtos.html">Produtos</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="contato.html">Contato</a></li><br/>
+                    <li><a href="javascript:void(0)" class="closebtn" onClick="fechaMenu()">&larr;</a></li>
+                </ul>
+            </aside>
+		</header>
+        <script language="JavaScript">
+            var contador = 1;
+            var tempo=5000;
+            setInterval("Exibindo()",tempo);
+          
+            function Exibindo() 
+            {
+                if (contador==1)
+                    {			
+                        document.getElementById("conteudo").style.backgroundImage="url('Fundo1.jpg')";
+                        contador++;
+                    }
+                else if (contador==2)
+                    {
+                        document.getElementById("conteudo").style.backgroundImage="url('Fundo2.jpg')";
+                        contador++;
+                    }
+                else if (contador==3)
+                    {
+                        document.getElementById("conteudo").style.backgroundImage="url('Fundo3.jpg')";
+                        contador=1;
+                    }
+            }
+
+            var num = 1;
+            var img1="Propaganda1.png";
+            var img2="Propaganda2.png";
+            var img3="Propaganda3.png";
+            timer=7000;
+            var chama=setInterval("Loop()",timer);
+            
+            function Loop()
+            {
+                document.images["slide"].src=eval("img"+num);
+                
+                if (num<3)
+                num++;
+                else
+                num=1;
+            }
+            
+            function Anterior()
+            {
+                
+                if (num == 3)
+                num=2;
+                else if (num == 2)
+                num=1;
+                else
+                num=3;
+                    
+                document.images["slide"].src=eval("img"+num);
+                
+                clearInterval(chama);
+                chama=setInterval("Exibindo()",tempo);
+            }
+            
+            function Proximo()
+            {
+                
+                document.images["slide"].src=eval("img"+num);
+                
+                if (num<3)
+                num++;
+                else
+                num=1;
+                
+                clearInterval(chama);
+                chama=setInterval("Exibindo()",timer);
+            }
+        </script>
+		
+        <div id="conteudo" >
+            <section id="meio">
+                <article id="Propaganda">
+                    <h1>Venha para o uGoodz</h1>
+                    <p id="subtitulo">O mercado dos bons preços</p>
+                    <img name="slide" id="slide" src="Propaganda1.png"/>
+                    <p class="ante" onClick="Anterior()">&#60;</p>
+	                <p class="prox" onClick="Proximo()">&#62;</p>
+                </article>
+                <article id="Promoção">
+                    <h1 id="subtitulo">Confira os nossos produtos <br> com as melhores ofertas</h1>
+                    <ul>
+                        <li>
+                            <section class="invisivel">
+                                <h1>Kit Mouse e Teclado</h1>
+                                <img src="Promoção1.png"/>
+                                <h4>Compre agora !!!<br>Promoção de Dia dos Namorados</h4>
+                                <h6>de: R$ 189,00</h6>
+                                <h5>por: R$ 145,00</h5>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="invisivel">
+                                <h1>Kit Mouse e Teclado</h1>
+                                <img src="Promoção2.png"/>
+                                <h4>Compre agora !!!<br>Promoção de Dia dos Namorados</h4>
+                                <h6>de: R$ 189,00</h6>
+                                <h5>por: R$ 145,00</h5>
+                            </section>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <section class="invisivel">
+                                <h1>Kit Mouse e Teclado</h1>
+                                <img src="Promoção3.png"/>
+                                <h4>Compre agora !!!<br>Promoção de Dia dos Namorados</h4>
+                                <h6>de: R$ 189,00</h6>
+                                <h5>por: R$ 145,00</h5>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="invisivel">
+                                <h1>Kit Mouse e Teclado</h1>
+                                <img src="Promoção4.png"/>
+                                <h4>Compre agora !!!<br>Promoção de Dia dos Namorados</h4>
+                                <h6>de: R$ 189,00</h6>
+                                <h5>por: R$ 145,00</h5>
+                            </section>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Um projeto da Etec Professor Basilides de Godoy</h2>
+                    <h3>Desenvolvido por Letícia, Maycon e Pedro</h3>
+                </article>
+            </section>
+        </div>
+        <a href="#inicio" id="botao">&#8679</a>
+        <div id="faixa">
+            <span id="botao-hamburg" onClick="abreMenu()">&#9776;</span>
+            <a href="index.html"><img id="logo" src="Logo uGoodz.png"/></a>
+        </div>
+    </body>
+</html>

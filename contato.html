@@ -1,0 +1,89 @@
+<!doctype HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Maycon"/>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+		<title>Contato</title>
+		<link rel="stylesheet" type="text/css" href="Estilo.css">
+		<link rel="shortcut icon" href="uGoodz Logo.png" type="image/x-icon">
+		<script language="JavaScript">
+
+			function abreMenu() 
+			{
+			  document.getElementById("menu-lateral").style.width = "30%";
+			  document.getElementById("menu-lateral").style.border = "3px outset #ffffff";
+              document.getElementById("faixa").style.visibility = "hidden";
+              document.getElementById("conteudo").style.opacity = "0.3";
+              document.getElementById("fundo_site").style.opacity = "0.3";
+              document.getElementById("menu-lateral").style.zIndex = "1";
+              document.getElementById("botao").style.zIndex = "1";
+			}
+			
+			function fechaMenu()
+			{
+			  document.getElementById("menu-lateral").style.width = "0%";
+			  document.getElementById("menu-lateral").style.border = "";
+			  document.getElementById("meio").style.marginLeft= "10%";
+			  document.getElementById("faixa").style.visibility = "visible";
+              document.getElementById("conteudo").style.opacity = "100%";
+              document.getElementById("fundo_site").style.opacity = "100%";
+			}
+		</script>
+	</head>
+	
+	<body id="tudo">
+        <header>
+            <span id="inicio">inicio</span>
+            <img id="fundo_site" src="Fundo Site.png">
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html"><h5 id="home">HOME</h5></a></li>
+					<li><a href="portfolio.html"><h5>Portfolio</h5></a></li>
+                    <li><a href="produtos.html"><h5>Produtos</h5></a></li>
+					<li><a href="contato.html"><h5>Contato</h5></a></li>
+				</ul>
+				</ul>
+			</nav>
+            <aside id="menu-lateral">
+                <ul>
+                    <li><a onclick="fechaMenu()" id="home" href="index.html">HOME</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="portfolio.html">Portfolio</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="produtos.html">Produtos</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="contato.html">Contato</a></li><br/>
+                    <li><a href="javascript:void(0)" class="closebtn" onClick="fechaMenu()">&larr;</a></li>
+                </ul>
+            </aside>
+		</header>
+		
+        <div id="conteudo" >
+            <section id="meio">
+                <article id="Redes">
+                    <h1>Redes Sociais</h1>
+                    <p>Siga-nos</p>
+                    <ul>
+                        <li><a target="_blank" href="https://www.facebook.com/uGoodzoficial/"><img src="Facebook.png"/></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/ugoodz_oficial/"><img src="insta.png"/></a></li>
+                        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5511988397775&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20as%20promo%C3%A7%C3%B5es%20do%20dia%20!"><img src="Whats.png"/></a></li>
+                    </ul>
+                    <p>Venha conferir as melhores ofertas !!!</p>
+                    <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.3031920041885!2d-46.748183850000004!3d-23.5575519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce55fd6736d949%3A0x8e12d667662b1910!2sAv.%20Jaguar%C3%A9%2C%20109%20-%20Butant%C3%A3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005346-000!5e0!3m2!1spt-BR!2sbr!4v1654210605311!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </article>
+                <article id="Sobre">
+                    <h1>Quem Somos</h1>
+                    <p>Esse são os Nice Integrantes</p>
+                    <img src="Integrantes.png"/>
+                </article>
+                <article>
+                    <h2>Um projeto da Etec Professor Basilides de Godoy</h2>
+                    <h3>Desenvolvido por Letícia, Maycon e Pedro</h3>
+                </article>
+            </section>
+        </div>
+        <a href="#inicio" id="botao">&#8679</a>
+        <div id="faixa">
+            <span id="botao-hamburg" onClick="abreMenu()">&#9776;</span>
+            <a href="index.html"><img id="logo" src="Logo uGoodz.png"/></a>
+        </div>
+    </body>
+</html>

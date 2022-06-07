@@ -1,0 +1,133 @@
+<!doctype HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Maycon"/>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+		<title>Produtos</title>
+		<link rel="stylesheet" type="text/css" href="Estilo.css">
+		<link rel="shortcut icon" href="uGoodz Logo.png" type="image/x-icon">
+		<script language="JavaScript">
+
+			function abreMenu() 
+			{
+			  document.getElementById("menu-lateral").style.width = "30%";
+			  document.getElementById("menu-lateral").style.border = "3px outset #ffffff";
+              document.getElementById("faixa").style.visibility = "hidden";
+              document.getElementById("conteudo").style.opacity = "0.3";
+              document.getElementById("fundo_site").style.opacity = "0.3";
+              document.getElementById("menu-lateral").style.zIndex = "1";
+              document.getElementById("botao").style.zIndex = "1";
+			}
+			
+			function fechaMenu()
+			{
+			  document.getElementById("menu-lateral").style.width = "0%";
+			  document.getElementById("menu-lateral").style.border = "";
+			  document.getElementById("meio").style.marginLeft= "10%";
+			  document.getElementById("faixa").style.visibility = "visible";
+              document.getElementById("conteudo").style.opacity = "100%";
+              document.getElementById("fundo_site").style.opacity = "100%";
+			}
+		</script>
+	</head>
+	
+	<body id="tudo">
+        <header>
+            <span id="inicio">inicio</span>
+            <img id="fundo_site" src="Fundo Site.png">
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html"><h5 id="home">HOME</h5></a></li>
+					<li><a href="portfolio.html"><h5>Portfolio</h5></a></li>
+                    <li><a href="produtos.html"><h5>Produtos</h5></a></li>
+					<li><a href="contato.html"><h5>Contato</h5></a></li>
+				</ul>
+				</ul>
+			</nav>
+            <aside id="menu-lateral">
+                <ul>
+                    <li><a onclick="fechaMenu()" id="home" href="index.html">HOME</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="portfolio.html">Portfolio</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="produtos.html">Produtos</a></li><br/>
+                    <li><a onclick="fechaMenu()" href="contato.html">Contato</a></li><br/>
+                    <li><a href="javascript:void(0)" class="closebtn" onClick="fechaMenu()">&larr;</a></li>
+                </ul>
+            </aside>
+		</header>
+		
+        <div id="conteudo" >
+            <section id="meio">
+                <article id="Categorias">
+                    <h1>Categorias</h1>
+                    <p>Filtre a suas compras por categorias</p>
+                    <ul>
+                        <li>
+                            <p>Padaria</p>
+                            <img src="pao.png"/>
+                        </li>
+                        <li>
+                            <p>Açougue</p>
+                            <img src="acougue.png"/>
+                        </li>
+                        <li>
+                            <p>Limpeza</p>
+                                <img src="limpeza.png"/>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p id="diferente">Eletrodomésticos</p>
+                                <img src="eletro.png"/>
+                        </li>
+                        <li>
+                            <p>Perfumaria</p>
+                                <img src="perfume.png"/>
+                        </li>
+                        <li>
+                            <p>Doceria</p>
+                                <img src="doces.png"/>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>Vestuário</p>
+                                <img src="roupas.png"/>
+                        </li>
+                        <li>
+                            <p>Lazer</p>
+                                <img src="lazer.png"/>
+                        </li>
+                        <li>
+                            <p>Horti-fruti</p>
+                                <img src="frutas.png"/>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>Pets</p>
+                                <img src="pets.png"/>
+                        </li>
+                        <li>
+                            <p>Móveis</p>
+                                <img src="moveis.png"/>
+                        </li>
+                        <li>
+                            <p>Outros</p>
+                                <img src="outros.png"/>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Um projeto da Etec Professor Basilides de Godoy</h2>
+                    <h3>Desenvolvido por Letícia, Maycon e Pedro</h3>
+                </article>
+            </section>
+        </div>
+        <a href="#inicio" id="botao">&#8679</a>
+        <div id="faixa">
+            <span id="botao-hamburg" onClick="abreMenu()">&#9776;</span>
+            <a href="index.html"><img id="logo" src="Logo uGoodz.png"/></a>
+        </div>
+    </body>
+</html>
