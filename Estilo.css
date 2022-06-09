@@ -14,6 +14,7 @@ body
 {
     background-color: #2A569F;
 	color: #ffffff;
+	margin: 0;
 	text-shadow: -1px -1px 0px #FFFFFF, -1px 1px 0px #FFF, 1px -1px 0px #FFFFFF 1px 0px 0px #FFFFFF;
 }
 #inicio
@@ -126,9 +127,8 @@ header img
     background-image: url("Fundo1.jpg");
 	background-repeat:no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: 100%;
 	background-position: center;
-	border-radius: 30px;
     width: 100%;
     bottom: 0;
     padding: 0;
