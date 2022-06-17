@@ -7,31 +7,8 @@
 		<title>Portfolio</title>
 		<link rel="stylesheet" type="text/css" href="Estilo.css">
 		<link rel="shortcut icon" href="uGoodz Logo.png" type="image/x-icon">
-		<script language="JavaScript">
-
-			function abreMenu() 
-			{
-			  document.getElementById("menu-lateral").style.width = "30%";
-			  document.getElementById("menu-lateral").style.border = "3px outset #ffffff";
-              document.getElementById("faixa").style.visibility = "hidden";
-              document.getElementById("conteudo").style.opacity = "0.3";
-              document.getElementById("fundo_site").style.opacity = "0.3";
-              document.getElementById("menu-lateral").style.zIndex = "1";
-              document.getElementById("botao").style.zIndex = "1";
-			}
-			
-			function fechaMenu()
-			{
-			  document.getElementById("menu-lateral").style.width = "0%";
-			  document.getElementById("menu-lateral").style.border = "";
-			  document.getElementById("meio").style.marginLeft= "10%";
-			  document.getElementById("faixa").style.visibility = "visible";
-              document.getElementById("conteudo").style.opacity = "100%";
-              document.getElementById("fundo_site").style.opacity = "100%";
-			}
-		</script>
+        <script language="JavaScript" src="script.js"> </script>
 	</head>
-	
 	<body id="tudo">
         <header>
             <span id="inicio">inicio</span>
@@ -55,41 +32,12 @@
                 </ul>
             </aside>
 		</header>
-        <script language="JavaScript">
-            var contador = 1;
-            var tempo=5000;
-            setInterval("Exibindo()",tempo);
-          
-            function Exibindo() 
-            {
-                if (contador==1)
-                    {			
-                        document.getElementById("conteudo").style.backgroundImage="url('Fundo1.jpg')";
-                        contador++;
-                    }
-                else if (contador==2)
-                    {
-                        document.getElementById("conteudo").style.backgroundImage="url('Fundo2.jpg')";
-                        contador++;
-                    }
-                else if (contador==3)
-                    {
-                        document.getElementById("conteudo").style.backgroundImage="url('Fundo3.jpg')";
-                        contador=1;
-                    }
-            }
-        </script>
-		
         <div id="conteudo" >
             <section id="meio">
                 <article id="Cartao">
                     <h1>Cartão Interativo</h1>
                     <p>Esse é o Nice Cartão</p>
                     <img src="Cartão Interativo uGoodz.png"/>
-                    <a id="maps" target="_blank" href="https://goo.gl/maps/MTeGVCdRVDRnCqrK7">OOO<br>OOO<br>OOO</a>
-                    <a id="face" target="_blank" href="https://www.facebook.com/uGoodzoficial/  ">OOO<br>OOO<br>OOO</a>
-                    <a id="whats" target="_blank" href="https://api.whatsapp.com/send?phone=5511988397775&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20as%20promo%C3%A7%C3%B5es%20do%20dia%20!">OOO<br>OOO<br>OOO</a>
-                    <a id="insta" target="_blank" href="https://www.instagram.com/ugoodz_oficial/">OOO<br>OOO<br>OOO</a>
                 </article>
                 <article id="Flyer">
                     <h1>Flyer</h1>
